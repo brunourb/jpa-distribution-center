@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration SYSTEM "classpath://org/hibernate/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+    <session-factory>
+
+        <property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
+        <property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
+        <property name="hibernate.connection.url">jdbc:mysql://192.168.56.102/jpa</property>
+        <property name="hibernate.connection.username">root</property>
+        <property name="hibernate.connection.password">123456</property>
+        <!-- Drop and re-create the database schema on startup -->
+        <property name="hbmdl.auto">update</property>
+        <property name="hibernate.current_session_context_class">thread</property>
+        <property name="hibernate.show_sql">true</property>
+
+        <mapping class="br.com.senaigo.entities.Category" />
+        <mapping class="br.com.senaigo.entities.Product" />
+        <mapping class="br.com.senaigo.entities.Suppliers" />
+
+
+    </session-factory>
+</hibernate-configuration>
